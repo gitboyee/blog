@@ -1,0 +1,20 @@
+<div class="panel">
+  <h1>List all articles</h1>
+  <%= link_to 'new article', new_article_url %>
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <th>text</th>
+      <th>edit</th>
+    </tr>
+    <% @articles.each do |article| %>
+        <tr>
+          <td><%= link_to article do %>
+                <strong><%= article.title %></strong>
+            <% end %></td>
+          <td><%= article.text %></td>
+          <td><%= link_to 'edit', edit_article_path(article) %></td>
+        </tr>
+    <% end %>
+  </table>
+</div>
