@@ -1,18 +1,6 @@
 <div class="container-fluid">
   <div class="panel">
-    <%= form_for :article,url: articles_url do |f| %>
-        <div class="row">
-          <%= f.label :title%>
-          <%= f.text_field :title %>
-        </div>
-        <div class="row">
-          <%= f.label :text %>
-          <%= f.text_area :text %>
-        </div>
-        <div class="row">
-          <%= f.submit %>
-        </div>
-    <% end %>
-    <%= link_to 'Back',articles_url %>
+    <%= render 'form' %>
+    <%= link_to 'Back', articles_url %>
   </div>
 </div>
